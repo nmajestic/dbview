@@ -11,6 +11,7 @@
 #include "parse.h"
 
 void list_employees(struct dbheader_t *dbhdr, struct employee_t *employees) {
+	if (dbhdr == NULL || employees == NULL) return STATUS_ERROR;
 	int i = 0;
 	int realcount = dbhdr->count;
 	
